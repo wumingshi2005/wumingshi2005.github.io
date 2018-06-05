@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,8 +9,54 @@
     <link rel="stylesheet" type="text/css" href="./static/css/base.css"></link>
   </head>
   <body>
-    <div id="root"></div>
-    <!-- built files will be auto injected -->
-  <script type="text/javascript" src="runtime~app.370f4163.js"></script><script type="text/javascript" src="vendors~app.c83d8b30.js"></script><script type="text/javascript" src="app.44768ed5.js"></script></body>
- 
+    <div id="root">
+      <div id="content">
+        <input type="text" placeholder="请输入你的姓名" id="name">
+      </div>
+      <p id="show"></p>
+    </div>
+
+    <style>
+      #root {
+        width: 100%;
+        height: 100%;
+        padding-top: 30px;
+        background: red;
+      }
+      #content {
+          width:200px;
+          margin: 0 auto;
+      }
+      #name {
+        width: 200px;
+        height: 40px;
+        padding: 0 10px;
+        line-height: 40px;
+      }
+      #show {
+        margin-top: 40px;
+        height: 40px;
+        color: blue;
+        padding-left: 20px;
+      }
+    </style>
+
+    <script>
+      window.onload = function() {
+        var ele = document.getElementById('name')
+        var show = document.getElementById('show')
+        ele.onkeyup = function () {
+          var value = ele.value.trim()
+          if(value == "张红艳") {
+            show.innerHTML = "够诚实哦，你的名字确实是" + value
+          } else {
+            show.innerHTML = "小乖乖，咋这么不诚实哦"
+          }
+          
+         
+        }
+
+
+      }
+    </script>
 </html>
