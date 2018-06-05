@@ -1,0 +1,45 @@
+html, body {
+	width: 100%;
+	min-width: 300px;
+	max-width: 640px;
+	height: 100%;
+	margin: 0 auto;
+}
+s,
+i,
+em,
+dfn {
+	font-style:normal;
+	text-decoration:none;
+}
+img {
+	border: 0;
+	vertical-align: middle
+}
+
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hiden;
+	clear: both;
+}
+
+.pr {
+	position: relative;
+}
+
+.pa {
+	position: absolute;
+}
+
+.fl {
+	float: left;
+
+}
+.fr {
+	float: right
+}
